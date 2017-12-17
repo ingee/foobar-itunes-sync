@@ -1,0 +1,65 @@
+#
+# file-system change log file
+# when just open and close foobar2000
+#
+
+New (2017-10-29 오후 2:36:56): C:\Users\ingee\AppData\Roaming\foobar2000\running
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\index.dat.tmp
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000003.fpl.tmp
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000001.fpl.tmp
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000002.fpl.tmp
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000006.fpl.tmp
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000004.fpl.tmp
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000005.fpl.tmp
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000007.fpl.tmp
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000001.fpl
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000008.fpl.tmp
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000001.fpl.tmp
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000002.fpl
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000002.fpl.tmp
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000003.fpl
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000003.fpl.tmp
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000004.fpl.tmp
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000005.fpl
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000004.fpl
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000005.fpl.tmp
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000006.fpl
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000006.fpl.tmp
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000007.fpl.tmp
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000007.fpl
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000008.fpl.tmp
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\00000008.fpl
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\index.dat.tmp
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\playlists-v1.3\index.dat
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\theme.fth.tmp
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\theme.fth
+Renamed (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\theme.fth.tmp -> C:\Users\ingee\AppData\Roaming\foobar2000\theme.fth
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\version.txt
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\index-data\C653739F-14B3-4EF2-819B-A3E2883230AE.temp
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\index-data
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\index-data\C653739F-14B3-4EF2-819B-A3E2883230AE
+Renamed (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\index-data\C653739F-14B3-4EF2-819B-A3E2883230AE.temp -> C:\Users\ingee\AppData\Roaming\foobar2000\index-data\C653739F-14B3-4EF2-819B-A3E2883230AE
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\index-data\188A64AA-6C1B-4AC9-990A-067CD016F72C.temp
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\index-data\188A64AA-6C1B-4AC9-990A-067CD016F72C
+Renamed (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\index-data\188A64AA-6C1B-4AC9-990A-067CD016F72C.temp -> C:\Users\ingee\AppData\Roaming\foobar2000\index-data\188A64AA-6C1B-4AC9-990A-067CD016F72C
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.new
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.new\folders
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.new\9BFDAA68EF0A2D6B\filter
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.new\filters
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.new\9BFDAA68EF0A2D6B
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.new\9BFDAA68EF0A2D6B\meta-0002
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.new\9BFDAA68EF0A2D6B\tree
+New (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.new\9BFDAA68EF0A2D6B\meta-0001
+Renamed (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library -> C:\Users\ingee\AppData\Roaming\foobar2000\library.old
+Renamed (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.new -> C:\Users\ingee\AppData\Roaming\foobar2000\library
+Modified (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.old\9BFDAA68EF0A2D6B\meta-0001
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.old\9BFDAA68EF0A2D6B\filter
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.old\9BFDAA68EF0A2D6B\tree
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.old\9BFDAA68EF0A2D6B\meta-0002
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.old\9BFDAA68EF0A2D6B
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.old\filters
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.old\folders
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\library.old
+Deleted (2017-10-29 오후 2:37:02): C:\Users\ingee\AppData\Roaming\foobar2000\running
