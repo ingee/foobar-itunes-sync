@@ -1,6 +1,5 @@
 # foobar-itunes-sync
 project to sync rating-info and playlist between foobar2000 and iTunes.
-* this project will use Python
 * this project will tested on Windows 10
 
 # rating-info
@@ -18,3 +17,7 @@ project to sync rating-info and playlist between foobar2000 and iTunes.
 * iPod manager (foobar component) Source-repo
   https://github.com/reupen/ipod_manager
   * Wiki: https://wiki.yuo.be/dop:start
+* foobar2000 SDK
+  https://www.foobar2000.org/SDK
+* foobar2000 development tutorial
+  http://yirkha.fud.cz/tmp/496351ef.tutorial-draft.html

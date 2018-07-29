@@ -1,0 +1,212 @@
+<html>
+<head>
+<title>Save and Restore Ratings/Playcounts/Last Played</title>
+
+<?XML:NAMESPACE PREFIX = HTA />
+<HTA:APPLICATION />
+
+<SCRIPT LANGUAGE="VBScript">
+Function GetNothing()
+	Set GetNothing = Nothing
+End Function
+</SCRIPT>
+
+<script type="text/JScript">
+
+var jsNothing = GetNothing();
+
+function saveXMLRatings(everything)
+{
+	var	iTunesApp = new ActiveXObject("iTunes.Application");
+	var	mainLibrary = iTunesApp.LibraryPlaylist;
+	var	mainLibrarySource = iTunesApp.LibrarySource;
+	var	tracks = mainLibrary.Tracks;
+	var	numTracks = tracks.Count;
+	var	i;
+
+	var	dom = new ActiveXObject("Microsoft.XMLDOM");
+
+	// create the root element
+	var  root = dom.createElement("songs");
+	dom.appendChild(root);
+
+	// Insert a newline + tab for readability
+	root.appendChild(dom.createTextNode("\n\t"));
+
+	// run through all the tracks
+	for (i = 1; i <= numTracks; i++)
+	{
+		var	currTrack = tracks.Item(i);
+		var	rating = currTrack.Rating;
+		var	playcount = currTrack.PlayedCount;
+		var 	lastplayed = currTrack.PlayedDate;
+		var	name = currTrack.Name;
+		var	artist = currTrack.Artist;
+		var	album = currTrack.Album;
+
+		// dont bother to save if the rating and playcount are both zero
+		if (rating != 0 || playcount != 0 || everything == 1)
+		{
+			// create a new song element
+			var songnode = dom.createElement("song");
+			root.appendChild(songnode);
+			songnode.appendChild(dom.createTextNode("\n\t\t"));
+
+			var artistnode = dom.createElement("artist");
+			artistnode.text = artist;
+			songnode.appendChild(artistnode);
+			songnode.appendChild(dom.createTextNode("\n\t\t"));
+
+			var albumnode = dom.createElement("album");
+			albumnode.text = album;
+			songnode.appendChild(albumnode);
+			songnode.appendChild(dom.createTextNode("\n\t\t"));
+
+			var namenode = dom.createElement("name");
+			namenode.text = name;
+			songnode.appendChild(namenode);
+			songnode.appendChild(dom.createTextNode("\n\t\t"));
+
+			var ratingnode = dom.createElement("rating");
+			ratingnode.text = rating;
+			songnode.appendChild(ratingnode);
+			songnode.appendChild(dom.createTextNode("\n\t\t"));
+
+			var datenode = dom.createElement("lastplayed");
+			datenode.text = lastplayed;
+			songnode.appendChild(datenode);
+			songnode.appendChild(dom.createTextNode("\n\t\t"));
+
+			var countnode = dom.createElement("playcount");
+			countnode.text = playcount;
+			songnode.appendChild(countnode);
+			songnode.appendChild(dom.createTextNode("\n\t"));
+			root.appendChild(dom.createTextNode("\n\t"));
+		}
+	}
+
+	document.write("Ratings/Playcount data saved.<br>");
+	// Add a newline.
+    	root.appendChild(dom.createTextNode("\n"));
+
+    	// Save the XML document to a file.
+	dom.save("ratings.xml");
+
+	root = null;
+	dom = null;
+	iTunesApp = jsNothing;
+}
+
+
+function restoreXMLRatings(everything)
+{
+	var	iTunesApp = new ActiveXObject("iTunes.Application");
+	var	mainLibrary = iTunesApp.LibraryPlaylist;
+	//var	mainLibrarySource = iTunesApp.LibrarySource;
+	var	tracks = mainLibrary.Tracks;
+
+	var ITPlaylistSearchFieldSongNames = 5;
+
+	var dom = new ActiveXObject("Microsoft.XMLDOM")
+	dom.async="false"
+	dom.load("ratings.xml")
+
+	// go through the songs one by one
+
+	var i, n_elems, j;
+	var elems = dom.getElementsByTagName("song");
+	n_elems = elems.length;
+	for (i = 0; i < n_elems; i++)
+	{
+		// elems.item(i) or elems[i] is the song node we want to look at
+
+		var	rating = elems.item(i).selectSingleNode("rating").text;
+		var	playcount = elems.item(i).selectSingleNode("playcount").text;
+		var	lastplayed = new Date(elems.item(i).selectSingleNode("lastplayed").text);
+		var	name = elems.item(i).selectSingleNode("name").text;
+		var	artist = elems.item(i).selectSingleNode("artist").text;
+		var	album = elems.item(i).selectSingleNode("album").text;
+
+		// search for the name of the song
+		var foundTracks = mainLibrary.Search(name,ITPlaylistSearchFieldSongNames);
+
+		var worked = 0;
+		if (foundTracks)
+		{
+			for (j=1; j<=foundTracks.Count;j++)
+			{
+				// check the artist, album, name, and kind
+				if (name == foundTracks.Item(j).Name &&
+				    artist == foundTracks.Item(j).Artist &&
+				    album == foundTracks.Item(j).Album)
+				{
+					var foundTrack = foundTracks.Item(j);
+
+					//document.write("Found an exact match for " +name+ "<br>");
+					if (rating !=0 || everything == 1)
+					{
+						//document.write("Setting rating to "+rating +"<br>");
+						foundTrack.Rating = parseInt(rating);
+					}
+					if (playcount !=0 || everything == 1)
+					{
+						//document.write("Setting playcount to "+playcount +"<br>");
+						foundTrack.PlayedCount = parseInt(playcount);
+
+						// also restore last played date in this case
+						//document.write("Setting lastplayed<br>");
+						foundTrack.PlayedDate = lastplayed.getVarDate();
+					}
+					worked=1;
+				}
+			}	// end for
+		}
+		if (worked==0) document.write("Could not find any match for "+name+", "+album+", "+artist+"<br>");
+		foundTracks=null;
+	}
+
+	dom = null;
+	iTunesApp = jsNothing;
+}
+
+</script>
+
+</head>
+<body>
+
+<h4>Saving Ratings</h4>
+<p>Click the "Save Ratings" button below to save the Ratings/Playcount/LastPlayedDate data from iTunes into
+a file. This file will be called "ratings.xml" and it will be saved in the same directory
+as you ran the HTA file from. This process may take a while.</p>
+
+<h4>Restoring Ratings</h4>
+<p>Click the "Restore Ratings" button to restore the Ratings/Playcount/LastPlayedDate from the "ratings.xml" file
+to the iTunes library. This is not undo-able, so you may want to backup your iTunes library
+files first.</p>
+
+<h4>Saving/Restoring Everything</h4>
+<p>Does the same thing, except it saves and restores all song data, including zero ratings and such.
+Normally, zero ratings get ignored, so as not to overwrite good ratings with zero ratings. This
+has no such protection. It's also much, much slower. Be patient.</p>
+
+<h4>Note</h4>
+<ul>
+<li>It's recommended that you have iTunes running when you use this program. It's not
+required, as iTunes will start regardless, but it's a bit faster if it's already running.</li>
+</ul>
+
+<center>
+<table border=0>
+<tr>
+<td align=center><button onclick="saveXMLRatings(0)">Save Ratings</button></td>
+<td align=center><button onclick="restoreXMLRatings(0)">Restore Ratings</button></td>
+</tr>
+<tr>
+<td align=center><button onclick="saveXMLRatings(1)">Save Everything</button></td>
+<td align=center><button onclick="restoreXMLRatings(1)">Restore Everything</button></td>
+</tr>
+</table>
+</center>
+
+</body>
+</html>
